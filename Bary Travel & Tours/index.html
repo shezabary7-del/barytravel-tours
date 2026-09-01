@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sri Lanka Tour | Bary Travel & Tours</title>
+  <meta name="description" content="Explore Sri Lanka with tour packages from Bary Travel & Tours, with cultural, hill country, coastal, wildlife and complete island itineraries, or create your own custom itinerary.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Gloock&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #17352d;
+      --ink-soft: #50675f;
+      --paper: #fffaf0;
+      --cream: #f3ecd9;
+      --orange: #d65f30;
+      --orange-dark: #a6401e;
+      --lime: #cadb77;
+      --gold: #e4b85b;
+      --line: rgba(23, 53, 45, .15);
+      --shadow: 0 24px 70px rgba(26, 55, 46, .14);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: linear-gradient(180deg, #fffaf0 0%, #f9f2e6 55%, #fffaf0 100%);
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.55;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      z-index: 30;
+      inset: 0;
+
+      pointer-events: none;
+      opacity: .08;
+      mix-blend-mode: multiply;
+      background:
+        radial-gradient(circle at top left, rgba(214,95,48,.12), transparent 42%),
+        radial-gradient(circle at bottom right, rgba(202,219,119,.15), transparent 40%);
+    }
+      img { display: block; max-width: 100%; }
+    a { color: inherit; }
+    button { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    ::selection { color: var(--paper); background: var(--orange); }
+
+    .shell { width: min(1180px, calc(100% - 40px)); margin-inline: auto; }
+    .display { font-family: "Gloock", serif; font-weight: 400; letter-spacing: -.035em; line-height: .98; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 15px;
+      color: var(--orange-dark);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before { content: ""; width: 32px; height: 1px; background: currentColor; }
+    .section-title { max-width: 780px; margin: 0; font-size: clamp(2.7rem, 5.8vw, 5.4rem); }
+    .lead { max-width: 650px; color: var(--ink-soft); font-size: clamp(1rem, 1.7vw, 1.18rem); }
+    .button {
+      min-height: 52px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0 23px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: .86rem;
+      font-weight: 700;
+      letter-spacing: .03em;
+      transition: transform .2s ease, color .2s ease, background .2s ease, box-shadow .2s ease, border-color .2s ease;
+      box-shadow: 0 10px 24px rgba(16,42,35,.18);
+    }
+    .main-nav a {
+      position: relative;
+      color: inherit;
+      text-decoration: none;
+      font-size: .8rem;
+      font-weight: 600;
+      opacity: .88;
+      transition: opacity .2s ease;
+    }
+    .main-nav a:hover { opacity: 1; }
+    .main-nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -7px;
+      width: 100%;
+      height: 1px;
+      background: currentColor;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .2s ease;
+      opacity: .8;
+    }
+    .main-nav a:hover::after { transform: scaleX(1); }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary {
+      color: var(--paper);
+      background: linear-gradient(135deg, var(--orange) 0%, #e77c48 100%);
+      box-shadow: 0 14px 28px rgba(214,95,48,.28);
+    }
+    .button-primary:hover { background: linear-gradient(135deg, var(--orange-dark) 0%, #b14d21 100%); }
+    .button-light {
+      color: var(--ink);
+      background: linear-gradient(135deg, #e7efb3 0%, var(--lime) 100%);
+      box-shadow: 0 14px 26px rgba(202,219,119,.26);
+    }
+    .button-outline {
+      color: var(--paper);
+      border-color: rgba(255,255,255,.52);
+      background: rgba(255,255,255,.02);
+      backdrop-filter: blur(3px);
+    }
+    .button-outline:hover {
+      color: var(--ink);
+      background: rgba(255,255,255,.95);
+      border-color: rgba(255,255,255,.8);
+    }
+
+    .site-header {
+      position: fixed;
+      z-index: 15;
+      top: 0;
+      left: 0;
+      width: 100%;
+      color: var(--paper);
+      background: rgba(12, 35, 29, 0.42);
+      backdrop-filter: blur(18px) saturate(1.1);
+      -webkit-backdrop-filter: blur(18px) saturate(1.1);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      box-shadow: 0 10px 22px rgba(9, 28, 23, .05);
+    }
+    .nav-wrap { height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 11px; color: inherit; text-decoration: none; }
+    .brand-mark { width: 39px; height: 39px; flex: none; }
+    .brand-logo {
+      width: 150px;
+      height: auto;
+      display: block;
+      flex: none;
+      filter: drop-shadow(0 8px 16px rgba(16,42,35,.12));
+    }
+    .signature-logo {
+      width: 110px;
+      margin-right: 10px;
+    }
+    .brand-copy { display: grid; line-height: 1.06; }
+    .brand-copy strong { font-family: "Gloock", serif; font-size: 1.04rem; font-weight: 400; }
+    .brand-copy span { opacity: .68; font-size: .61rem; letter-spacing: .13em; text-transform: uppercase; }
+    .main-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 8px 12px;
+      border: 1px solid rgba(255,255,255,.09);
+      background: rgba(255,255,255,.04);
+      border-radius: 999px;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    .main-nav a {
+      color: inherit;
+      text-decoration: none;
+      font-size: .77rem;
+      font-weight: 700;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      padding: 9px 12px;
+      border-radius: 999px;
+      transition: background .2s ease, color .2s ease;
+    }
+    .main-nav a:hover {
+      background: rgba(255,255,255,.1);
+      color: var(--paper);
+    }
+    .nav-cta {
+      padding: 10px 17px;
+      color: var(--ink) !important;
+      background: linear-gradient(135deg, #dfe8a2 0%, var(--lime) 100%);
+      border-radius: 999px;
+      box-shadow: 0 12px 24px rgba(202,219,119,.18);
+    }
+    .hero-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .hero-pills a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 36px;
+      padding: 0 14px;
+      border: 1px solid rgba(255,255,255,.28);
+      border-radius: 999px;
+      color: var(--paper);
+      background: rgba(255,255,255,.06);
+      text-decoration: none;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      backdrop-filter: blur(2px);
+    }
+    .hero-banner {
+      position: relative;
+      z-index: 2;
+      background: linear-gradient(135deg, #e4ebd5 0%, #dfe8c8 100%);
+      border-top: 1px solid rgba(23,53,45,.08);
+      border-bottom: 1px solid rgba(23,53,45,.08);
+    }
+    .hero-banner-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px 0;
+      color: var(--ink);
+    }
+    .hero-banner-copy {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: .76rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+    .hero-banner-copy strong {
+      font-family: "Gloock", serif;
+      font-size: 1.55rem;
+      letter-spacing: -.02em;
+      text-transform: none;
+      color: var(--ink);
+    }
+    .hero-banner a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 18px;
+      border-radius: 999px;
+      background: var(--ink);
+      color: var(--paper);
+      text-decoration: none;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .menu-toggle { display: none; width: 42px; height: 42px; color: inherit; background: transparent; border: 1px solid rgba(255,255,255,.4); border-radius: 50%; cursor: pointer; }
+
+    .hero { position: relative; min-height: clamp(380px, 60vh, 740px); display: grid; align-items: center; color: var(--paper); background: var(--ink); overflow: hidden; }
+    .hero-media { position: absolute; inset: 0; }
+    .hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: 58% center; filter: saturate(.78) contrast(1.03); }
+    .hero-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(10,39,31,.94) 0%, rgba(10,39,31,.67) 45%, rgba(10,39,31,.12) 82%), linear-gradient(0deg, rgba(10,39,31,.62), transparent 58%); }
+    .hero-content { position: relative; z-index: 2; padding: 165px 0 92px; }
+    .hero-kicker { margin: 0 0 18px; color: var(--lime); font-size: .75rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+    .hero h1 { max-width: 850px; margin: 0; font-size: clamp(4rem, 9.6vw, 9.2rem); text-wrap: balance; text-shadow: 0 12px 32px rgba(0,0,0,.18); }
+    .hero h1 em { color: var(--lime); font-style: italic; }
+    .hero-intro { max-width: 590px; margin: 27px 0 34px; color: rgba(255,250,240,.8); font-size: clamp(1.04rem, 2vw, 1.22rem); letter-spacing: .01em; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero-stamp {
+      position: absolute; z-index: 3; right: 8%; top: 25%; width: 126px; aspect-ratio: 1; display: grid; place-items: center;
+      border: 1px solid rgba(255,255,255,.5); border-radius: 50%; font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-align: center; text-transform: uppercase;
+      transform: rotate(10deg); background: rgba(255,255,255,.05); backdrop-filter: blur(5px); box-shadow: 0 20px 40px rgba(0,0,0,.12);
+    }
+    .hero-stamp::after { content: ""; position: absolute; inset: 7px; border: 1px dashed rgba(255,255,255,.38); border-radius: 50%; }
+
+    .discover-gateway { padding: 28px 0; background: var(--paper); }
+    .gateway-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 18px; }
+    .gateway-card {
+      position: relative; min-height: 310px; display: grid; align-items: end; padding: 34px; color: var(--paper);
+      background: var(--ink); border-radius: 16px; overflow: hidden; text-decoration: none; isolation: isolate;
+      box-shadow: 0 24px 48px rgba(17,43,35,.13); border: 1px solid rgba(17,43,35,.04);
+    }
+    .gateway-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .7s cubic-bezier(.2,.7,.2,1); }
+    .gateway-card::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(0deg, rgba(10,39,31,.92), rgba(10,39,31,.12) 82%); }
+    .gateway-card:hover img { transform: scale(1.045); }
+    .gateway-copy { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 25px; }
+    .gateway-copy span { color: var(--lime); font-size: .68rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+    .gateway-title { max-width: 590px; display: block; margin: 8px 0 0; font-size: clamp(2rem, 4vw, 4rem); color: var(--paper) !important; text-transform: none !important; letter-spacing: -.035em !important; }
+    .gateway-arrow { width: 54px; aspect-ratio: 1; display: grid; place-items: center; color: var(--ink) !important; background: var(--lime); border-radius: 50%; font-size: 1.35rem !important; transition: transform .2s ease; }
+    .gateway-card:hover .gateway-arrow { transform: translate(3px, -3px); }
+
+    .trust-strip { color: var(--paper); background: var(--orange); }
+    .trust-grid { display: grid; grid-template-columns: 1.2fr repeat(3, 1fr); }
+    .trust-item { min-height: 105px; display: grid; align-content: center; padding: 18px 25px; border-right: 1px solid rgba(255,255,255,.22); }
+    .trust-item:last-child { border: 0; }
+    .trust-item span { color: rgba(255,250,240,.68); font-size: .65rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    .trust-item strong { margin-top: 4px; font-family: "Gloock", serif; font-size: 1.13rem; font-weight: 400; }
+
+    .packages { padding: 120px 0 130px; background: var(--cream); }
+    .packages-head { display: flex; align-items: end; justify-content: space-between; gap: 45px; margin-bottom: 55px; }
+    .packages-head .lead { max-width: 420px; margin: 0 0 7px; }
+    .package-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+    .package-card {
+      position: relative;
+      grid-column: span 4;
+      min-height: 430px;
+      display: grid;
+      align-items: end;
+      padding: 0;
+      color: var(--paper);
+      background: var(--ink);
+      border: 0;
+      border-radius: 18px;
+      overflow: hidden;
+      text-align: left;
+      cursor: pointer;
+      isolation: isolate;
+      box-shadow: 0 22px 40px rgba(23,53,45,.10);
+      border: 1px solid rgba(23,53,45,.04);
+    }
+    .package-card:nth-child(1), .package-card:nth-child(2) { grid-column: span 6; min-height: 500px; }
+    .package-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .7s cubic-bezier(.2,.7,.2,1), filter .3s ease; }
+    .package-card::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(0deg, rgba(10,39,31,.92), rgba(10,39,31,.08) 72%); }
+    .package-card:hover img, .package-card:focus-visible img { transform: scale(1.05); }
+    .package-card:focus-visible { outline: 4px solid var(--orange); outline-offset: 4px; }
+    @media (min-width: 1000px) {
+      .package-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; align-items: start; }
+      .package-grid > .package-card { grid-column: auto; }
+      /* centre the final (5th) package across the row */
+      .package-grid > .package-card:last-child { grid-column: 1 / -1; justify-self: center; max-width: 640px; width: 100%; }
+      /* ensure consistent heights for the 4 visible cards */
+      .package-grid > .package-card { min-height: 420px; }
+    }
+
+    /* Strong override: force 2x2 packages layout starting at 900px */
+    @media (min-width: 900px) {
+      .package-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 32px !important; }
+      .package-grid > .package-card { grid-column: auto !important; }
+      .package-grid > .package-card:last-child { grid-column: 1 / -1 !important; justify-self: center !important; max-width: 700px !important; width: 100% !important; margin-top: 6px; }
+    }
+    .package-card.active::before { content: "Selected package"; position: absolute; z-index: 3; top: 18px; right: 18px; padding: 8px 12px; color: var(--ink); background: var(--lime); border-radius: 999px; font-size: .63rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .popular-badge { position: absolute; z-index: 3; top: 18px; left: 18px; padding: 8px 12px; color: var(--paper); background: var(--orange); border-radius: 999px; font-size: .63rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .package-copy { position: relative; z-index: 2; width: 100%; padding: 28px; }
+    .package-number { display: block; margin-bottom: 11px; color: var(--lime); font-size: .68rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+    .package-copy h3 { max-width: 370px; margin: 0 0 9px; font-family: "Gloock", serif; font-size: clamp(1.65rem, 3.5vw, 2.75rem); font-weight: 400; line-height: 1.02; }
+    .package-meta { display: flex; align-items: center; justify-content: space-between; gap: 18px; color: rgba(255,250,240,.72); font-size: .76rem; }
+    .package-arrow { width: 36px; height: 36px; display: grid; place-items: center; flex: none; border: 1px solid rgba(255,255,255,.4); border-radius: 50%; transition: color .2s ease, background .2s ease; }
+    .package-card:hover .package-arrow { color: var(--ink); background: var(--lime); border-color: var(--lime); }
+    .package-note { margin: 30px 0 0; color: var(--ink-soft); font-size: .82rem; text-align: center; }
+    .custom-package-note { max-width: 850px; display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: center; margin: 22px auto 0; padding: 22px 26px; color: var(--paper); background: var(--ink); border-radius: 8px; text-align: left; }
+    .custom-package-note strong { color: var(--lime); font-family: "Gloock", serif; font-size: 1.25rem; font-weight: 400; }
+    .custom-package-note span { color: rgba(255,250,240,.72); font-size: .85rem; }
+
+    .detail { padding: 125px 0; }
+    .detail-panel {
+      transition: opacity .18s ease, transform .18s ease;
+      padding: 26px 28px 12px;
+      border: 1px solid rgba(23,53,45,.08);
+      border-radius: 22px;
+      background: rgba(255,255,255,.6);
+      box-shadow: 0 18px 40px rgba(23,53,45,.04);
+    }
+    .detail-panel.changing { opacity: 0; transform: translateY(8px); }
+    .detail-top { display: grid; grid-template-columns: 1.05fr .95fr; gap: 80px; align-items: start; margin-bottom: 75px; }
+    .detail-label { color: var(--orange); }
+    .detail-title { margin: 0; font-size: clamp(3.1rem, 7vw, 6.7rem); }
+    .detail-summary { padding-top: 35px; }
+    .detail-summary p { margin-top: 0; color: var(--ink-soft); font-size: 1.06rem; }
+    .fact-row { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 31px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .fact { padding: 18px 13px 18px 0; }
+    .fact span { display: block; color: var(--ink-soft); font-size: .62rem; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; }
+    .fact strong { display: block; margin-top: 4px; font-family: "Gloock", serif; font-size: 1.15rem; font-weight: 400; }
+    .route-block { margin-top: 28px; }
+    .route-block > span { display: block; margin-bottom: 11px; color: var(--ink-soft); font-size: .63rem; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; }
+    .route-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .route-chip { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; background: var(--cream); border-radius: 999px; font-size: .73rem; font-weight: 600; }
+    .route-chip:not(:last-child)::after { content: "→"; color: var(--orange); margin-left: 3px; }
+
+    .detail-columns { display: grid; grid-template-columns: 350px minmax(0, 1fr); gap: 78px; align-items: start; }
+    .highlight-card {
+      position: sticky; top: 24px; padding: 33px; color: var(--paper); background: linear-gradient(180deg, #17352d 0%, #122e28 100%);
+      border-radius: 18px; box-shadow: var(--shadow); border: 1px solid rgba(255,255,255,.06);
+    }
+    .highlight-card h3 { margin: 0 0 24px; font-family: "Gloock", serif; font-size: 2rem; font-weight: 400; }
+    .highlight-list { display: grid; gap: 13px; margin: 0; padding: 0; list-style: none; }
+    .highlight-list li { display: grid; grid-template-columns: 20px 1fr; gap: 11px; color: rgba(255,250,240,.8); font-size: .84rem; }
+    .highlight-list svg { width: 18px; margin-top: 2px; color: var(--lime); }
+    .highlight-rule { height: 1px; margin: 26px 0; background: rgba(255,255,255,.16); }
+    .exclusion { margin: 0; color: rgba(255,250,240,.62); font-size: .74rem; }
+    .exclusion strong { color: var(--lime); }
+    .itinerary-head { margin-bottom: 27px; }
+    .itinerary-head h3 { margin: 0; font-family: "Gloock", serif; font-size: clamp(2.3rem, 4vw, 3.8rem); font-weight: 400; }
+    .day-list { border-top: 1px solid var(--line); }
+    .day { display: grid; grid-template-columns: 74px 1fr; gap: 20px; padding: 27px 0; border-bottom: 1px solid var(--line); }
+    .day-num { color: var(--orange); font-family: "Gloock", serif; font-size: 1.48rem; }
+    .day h4 { margin: 0 0 7px; font-family: "Gloock", serif; font-size: 1.38rem; font-weight: 400; }
+    .day p { margin: 0; color: var(--ink-soft); font-size: .88rem; }
+
+    .journey-info {
+      padding: 115px 0;
+      color: var(--paper);
+      background-image: linear-gradient(135deg, rgba(17, 53, 44, .85), rgba(81, 116, 62, .72)), url("Images/srilanka.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .journey-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 36px 80px; }
+    .journey-title { position: sticky; top: 28px; align-self: start; }
+    .journey-info .eyebrow { color: var(--lime); }
+    .journey-title .section-title { font-size: clamp(3.1rem, 6.5vw, 6rem); }
+    .info-list { counter-reset: info; border-top: 1px solid rgba(255,255,255,.28); }
+    .info-item { counter-increment: info; display: grid; grid-template-columns: 52px 1fr; gap: 20px; padding: 30px 0; border-bottom: 1px solid rgba(255,255,255,.28); }
+    .info-item::before { content: "0" counter(info); color: var(--lime); font-family: "Gloock", serif; font-size: 1.14rem; }
+    .info-item h3 { margin: 0 0 7px; font-family: "Gloock", serif; font-size: 1.48rem; font-weight: 400; }
+    .info-item p { margin: 0; color: rgba(255,250,240,.8); font-size: .9rem; }
+    .journey-note-box {
+      grid-column: 2;
+      justify-self: start;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 18px;
+      padding: 16px 18px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(255,255,255,.14), rgba(255,255,255,.04));
+      border: 1px solid rgba(255,255,255,.22);
+      box-shadow: 0 20px 32px rgba(8,22,18,.16);
+      color: var(--paper);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .journey-note-box::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--lime);
+      box-shadow: 0 0 0 4px rgba(181, 210, 85, .18);
+    }
+    .journey-note-box strong { color: var(--lime); }
+
+    .signature-banner {
+      padding: 0 0 28px;
+      background: linear-gradient(180deg, #f8f0df 0%, #f8f0df 44%, #fffaf0 100%);
+    }
+    .signature-banner-inner {
+      display: flex; align-items: center; justify-content: space-between; gap: 24px;
+      padding: 28px 32px; border-radius: 22px; background: linear-gradient(135deg, #17352d 0%, #234a3f 100%);
+      color: var(--paper); box-shadow: 0 28px 50px rgba(23,53,45,.12);
+      border: 1px solid rgba(255,255,255,.06);
+    }
+    .signature-banner-copy { max-width: 680px; }
+    .signature-banner-copy span {
+      display: block; color: var(--lime); font-size: .68rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
+    }
+    .signature-banner-copy h3 {
+      margin: 10px 0 7px; font-family: "Gloock", serif; font-size: clamp(2rem, 3vw, 2.9rem); font-weight: 400; line-height: 1.1;
+    }
+    .signature-banner-copy p { margin: 0; color: rgba(255,250,240,.78); line-height: 1.7; }
+    .reason-grid {
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 16px;
+    }
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 36px;
+    }
+    .cards-grid .card {
+      padding: 28px 22px;
+      border-radius: 18px;
+      border: 1px solid rgba(23,53,45,.08);
+      box-shadow: 0 12px 20px rgba(23,53,45,.02);
+      background: #fffdf9;
+      color: #50675f;
+    }
+    .cards-grid .card.dark { background: #17352d; color: #fff; }
+    .cards-grid .card.pale { background: #f3ecd9; }
+    .cards-grid .card span { display: block; color: #cadb77; font-size: .68rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+    .cards-grid .card h3 { margin: 12px 0 10px; font-family: "Gloock", serif; font-size: 1.8rem; font-weight: 400; line-height: 1.05; }
+    .cards-grid .card p { margin: 0; color: inherit; line-height: 1.7; }
+
+    @media (max-width: 920px) {
+      .cards-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 650px) {
+      .cards-grid { display: block !important; }
+      .cards-grid .card { display: block; width: 100%; box-sizing: border-box; padding: 20px; margin-bottom: 18px; }
+      .cards-grid .card h3 { font-size: 1.4rem; }
+      .cards-grid .card p { font-size: .95rem; }
+    }
+    .reason-card {
+      padding: 28px 24px; border-radius: 18px; border: 1px solid rgba(23,53,45,.08); background: #fffdf9;
+      box-shadow: 0 18px 34px rgba(23,53,45,.04);
+    }
+    .reason-card span {
+      display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 50%;
+      background: rgba(214,95,48,.08); color: var(--orange-dark); font-weight: 700; font-size: .9rem;
+    }
+    .reason-card h4 {
+      margin: 18px 0 10px; font-family: "Gloock", serif; font-size: 1.8rem; font-weight: 400; line-height: 1.08;
+    }
+    .reason-card p { margin: 0; color: var(--ink-soft); line-height: 1.7; }
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 50;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #27c25a 0%, #1a9d45 100%);
+      color: white;
+      box-shadow: 0 18px 32px rgba(24, 127, 57, .26);
+      text-decoration: none;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .floating-whatsapp:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 22px 36px rgba(24, 127, 57, .32);
+    }
+    .floating-whatsapp svg { width: 26px; height: 26px; }
+
+    .contact { position: relative; min-height: 610px; display: grid; align-items: center; color: var(--paper); overflow: hidden; }
+    .contact > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 58%; }
+    .contact::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(10,39,31,.95), rgba(10,39,31,.42)); }
+    .contact-content { position: relative; z-index: 2; padding: 95px 0; }
+    .contact-content h2 { max-width: 780px; margin: 0 0 23px; font-size: clamp(3.3rem, 7.5vw, 7.2rem); text-shadow: 0 12px 28px rgba(0,0,0,.16); }
+    .contact-content p { max-width: 565px; margin: 0 0 30px; color: rgba(255,250,240,.76); }
+    .contact-links { display: flex; flex-wrap: wrap; gap: 12px; }
+
+    footer {
+      padding: 32px 0; color: var(--paper); background: linear-gradient(180deg, #102a23 0%, #0d201d 100%);
+      border-top: 1px solid rgba(255,255,255,.08);
+    }
+    .footer-row { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+    .footer-row p { margin: 0; color: rgba(255,250,240,.55); font-size: .72rem; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 19px; }
+    .footer-links a { color: rgba(255,250,240,.73); font-size: .74rem; text-decoration: none; }
+
+    .gallery-section { padding: 100px 0; background: var(--cream); }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 28px;
+      justify-items: center;
+    }
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      min-height: 240px;
+      width: 100%;
+      border-radius: 18px;
+      background: var(--ink);
+      box-shadow: 0 20px 45px rgba(23,53,45,.08);
+      cursor: pointer;
+      aspect-ratio: 1 / 1;
+      border: 1px solid rgba(23,53,45,.04);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .gallery-item:nth-child(n + 9) {
+      aspect-ratio: 1.6 / 1;
+    }
+    .gallery-item:nth-child(9), .gallery-item:nth-child(10) {
+      grid-column: span 2;
+    }
+    .gallery-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 24px 52px rgba(23,53,45,.12);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      transition: transform .7s ease;
+    }
+    .gallery-item:hover img { transform: scale(1.04); }
+    .gallery-item figcaption {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 16px;
+      padding: 10px 12px;
+      color: var(--paper);
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      background: rgba(10,39,31,.42);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 999px;
+    }
+    .popup {
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      padding: 20px;
+      background: rgba(10,39,31,.72);
+      backdrop-filter: blur(6px);
+    }
+    .popup.open { display: flex; }
+    .popup-content {
+      position: relative;
+      width: min(760px, 100%);
+      max-height: 90vh;
+      overflow: auto;
+      background: linear-gradient(180deg, #fffdf9 0%, #f5f0e2 100%);
+      border-radius: 22px;
+      box-shadow: 0 30px 70px rgba(10,39,31,.32);
+      padding: 26px 26px 18px;
+      animation: popupIn .2s ease;
+      pointer-events: auto;
+      border: 1px solid rgba(23,53,45,.08);
+    }
+    @keyframes popupIn {
+      from { opacity: 0; transform: scale(.96) translateY(12px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
+    }
+    .popup-content img {
+      width: 100%;
+      max-height: 60vh;
+      object-fit: cover;
+      border-radius: 14px;
+      margin-bottom: 18px;
+      box-shadow: 0 18px 38px rgba(23,53,45,.10);
+    }
+    .popup-content h2 {
+      margin: 0 0 10px;
+      font-family: "Gloock", serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 400;
+      color: var(--ink);
+    }
+    .popup-content p {
+      margin: 0;
+      color: var(--ink-soft);
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+    .popup-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .popup-nav {
+      border: 0;
+      border-radius: 999px;
+      background: var(--ink);
+      color: var(--paper);
+      padding: 10px 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform .2s ease, opacity .2s ease;
+    }
+    .popup-nav:hover { transform: translateY(-1px); }
+    .close-btn {
+      position: absolute;
+      right: 16px;
+      top: 12px;
+      width: 38px;
+      height: 38px;
+      border: none;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: rgba(23,53,45,.08);
+      color: var(--ink);
+      font-size: 2rem;
+      cursor: pointer;
+      line-height: 1;
+      transition: background .2s ease, transform .2s ease;
+    }
+    .close-btn:hover { background: rgba(23,53,45,.12); transform: scale(1.04); }
+
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    @media (max-width: 920px) {
+      .main-nav { display: none; position: absolute; top: 74px; left: 20px; right: 20px; padding: 25px; color: var(--ink); background: var(--paper); border-radius: 8px; box-shadow: var(--shadow); }
+      .main-nav.open { display: grid; }
+      .nav-cta { width: fit-content; }
+      .menu-toggle { display: grid; place-items: center; }
+      .trust-grid { grid-template-columns: repeat(2, 1fr); }
+      .gateway-grid { grid-template-columns: 1fr; }
+      .trust-item { border-bottom: 1px solid rgba(255,255,255,.22); }
+      .reason-grid { grid-template-columns: 1fr; }
+      .signature-banner-inner { flex-direction: column; align-items: flex-start; }
+      .gallery-grid { grid-template-columns: 1fr !important; gap: 32px !important; padding-inline: 18px !important; justify-items: center; }
+      .gallery-item { width: 100%; max-width: 760px; }
+      .package-card, .package-card:nth-child(1), .package-card:nth-child(2) { grid-column: span 6; min-height: 430px; }
+      .package-card:last-child { grid-column: 3 / 11; }
+      .detail-top, .detail-columns, .journey-grid { grid-template-columns: 1fr; gap: 48px; }
+      .highlight-card, .journey-title { position: relative; top: auto; }
+      .highlight-list { grid-template-columns: 1fr 1fr; }
+    }
+
+    /* Force larger gaps and single-column gallery on smaller phones */
+    @media (max-width: 768px) {
+      .gallery-grid { grid-template-columns: 1fr !important; gap: 28px !important; padding-inline: 18px !important; justify-items: center; }
+      .gallery-item { width: 100%; max-width: 680px; min-height: 200px; border-radius: 14px; overflow: hidden; }
+      .gallery-item img { border-radius: 12px; display: block; object-position: center center; }
+    }
+
+    @media (max-width: 650px) {
+      .shell { width: min(100% - 28px, 1180px); }
+      .nav-wrap { height: 72px; }
+      .brand-copy strong { font-size: .92rem; }
+      .hero { min-height: 700px; }
+      .hero-media img { object-position: 64% center; }
+      .hero h1 { font-size: clamp(3.7rem, 18vw, 5.7rem); }
+      .hero-stamp { display: none; }
+      .hero-actions, .contact-links { width: min(325px, 100%); flex-direction: column; }
+      .discover-gateway { padding: 14px 0; }
+      .gateway-card { min-height: 275px; padding: 25px; }
+      .gateway-copy { grid-template-columns: 1fr; }
+      .gateway-arrow { display: none; }
+      .trust-grid { grid-template-columns: 1fr 1fr; }
+      .trust-item { min-height: 90px; padding: 15px; }
+      .trust-item strong { font-size: .95rem; }
+      .packages, .detail { padding: 85px 0; }
+      .gallery-grid { grid-template-columns: 1fr; gap: 22px; padding-inline: 14px; }
+      .packages-head { display: block; }
+      .packages-head .lead { margin-top: 22px; }
+      .package-grid { display: grid; grid-template-columns: 1fr; }
+      .package-card, .package-card:nth-child(1), .package-card:nth-child(2), .package-card:last-child { grid-column: auto; min-height: 410px; }
+      .package-card.active::before { top: 14px; right: 14px; }
+      .custom-package-note { grid-template-columns: 1fr; gap: 6px; padding: 22px; }
+      .detail-top { margin-bottom: 55px; }
+      .detail-summary { padding-top: 0; }
+      .fact-row { grid-template-columns: 1fr; }
+      .fact { padding: 13px 0; border-bottom: 1px solid var(--line); }
+      .fact:last-child { border: 0; }
+      .highlight-card { padding: 27px; }
+      .highlight-list { grid-template-columns: 1fr; }
+      .day { grid-template-columns: 48px 1fr; gap: 12px; }
+      .journey-info { padding: 85px 0; }
+      .info-item { grid-template-columns: 42px 1fr; gap: 12px; }
+      .footer-row { align-items: flex-start; flex-direction: column; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell nav-wrap">
+      <a class="brand" href="#top" aria-label="Bary Travel and Tours home">
+        <img class="brand-logo" src="magnific_modern-vector-logo-design_mEqBZOzhJQ-removebg-preview.png" alt="Bary Travel & Tours logo" width="150" height="56">
+        <span class="brand-copy"><strong>Bary Travel & Tours</strong><span>Private Sri Lanka journeys</span></span>
+      </a>
+      <nav class="main-nav" id="main-nav" aria-label="Primary navigation">
+        <a href="#how-it-works">What to expect</a>
+        <a href="#packages">Packages</a>
+        <a href="#about-sri-lanka">The island</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact" class="nav-cta">Contact us</a>
+      </nav>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation">
+        <svg width="19" height="19" viewBox="0 0 20 20" aria-hidden="true"><path d="M2 5h16M2 10h16M2 15h16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-media"><img src="Images/ninarchbridge.avif" alt="Sri Lanka scenic landscape and mountain bridge view" width="2000" height="1250" fetchpriority="high"></div>
+      <div class="shell hero-content">
+        <p class="hero-kicker">Five inspiring routes—or one designed entirely for you</p>
+        <h1 class="display">Sri Lanka,<br><em>your way.</em></h1>
+        <p class="hero-intro">Use our cultural, hill country, coastal, wildlife or complete island routes as a starting point. Every journey can be customized around the places you love and the exact number of days you want to travel.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#packages">Explore packages <span aria-hidden="true">→</span></a>
+          <a class="button button-outline" href="#about-sri-lanka">
+  Read the Sri Lanka story
+</a>
+          <a class="button button-outline" href="https://wa.me/94777009897?text=Hi%20Bary%20Travel%20%26%20Tours!%20I%27d%20like%20to%20enquire%20about%20a%20Sri%20Lanka%20tour%20package." target="_blank" rel="noopener">Chat on WhatsApp</a>
+        </div>
+        <div class="hero-pills" aria-label="Quick links">
+          <a href="#how-it-works">What to expect</a>
+          <a href="#packages">Packages</a>
+          <a href="#about-sri-lanka">The island</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Plan my trip</a>
+        </div>
+      </div>
+      <div class="hero-stamp">Private tours<br>Local knowledge</div>
+    </section>
+
+    <section class="hero-banner" aria-label="Explore Sri Lanka">
+      <div class="shell hero-banner-inner">
+        <div class="hero-banner-copy">
+          <span>Tailor-made journeys</span>
+          <strong>Private Sri Lanka trips from culture to coast.</strong>
+        </div>
+        <a href="#how-it-works">See what to expect</a>
+      </div>
+    </section>
+
+    <section class="journey-info" id="how-it-works">
+      <div class="shell journey-grid">
+        <div class="journey-title reveal"><p class="eyebrow">What to expect</p><h2 class="display section-title">Simple,<br>private,<br>flexible.</h2></div>
+        <div class="info-list reveal">
+          <article class="info-item"><div><h3>Your route, your pace, your number of days</h3><p>These packages are suggestions, not fixed choices. Combine destinations, add or remove activities, and choose exactly how many days you want to travel—we can shape a private itinerary around your interests and schedule.</p></div></article>
+          <article class="info-item"><div><h3>Airport pickup and drop off</h3><p>Every journey begins with a welcome at the airport and concludes with a return airport transfer, unless a different location is agreed.</p></div></article>
+          <article class="info-item"><div><h3>Customer Satisfaction</h3><p>Focus on friendly service, reliable arrangements, and making every journey comfortable and enjoyable.</p></div></article>
+          <article class="info-item"><div><h3>Personalized Tours</h3><p>Create flexible travel experiences based on each traveller's interests, schedule, and budget.</p></div></article>
+          <article class="info-item"><div><h3>Activities are customizable</h3><p>Safaris, whale watching, train tickets, water sports and attraction entries depend on availability and can be included in a tailored quotation.</p></div></article>
+        </div>
+        <div class="journey-note-box reveal"><strong>Note:</strong> Meals and accommodation are not included.</div>
+      </div>
+    </section>
+
+    <section class="packages" id="packages">
+      <div class="shell">
+        <header class="packages-head reveal">
+          <div><p class="eyebrow">Choose your route</p><h2 class="display section-title">Five distinct<br>island stories.</h2></div>
+          <p class="lead">Explore these suggested itineraries, then mix destinations, change activities and choose a trip length that suits your time.</p>
+        </header>
+
+        <div class="package-grid">
+          <button class="package-card active reveal" type="button" data-package="cultural" aria-label="View Cultural Sri Lanka Explorer package">
+            <img src="Images/anuradhpura.jpg" alt="Ruwanwelisaya stupa in ancient Anuradhapura" loading="lazy" width="1920" height="1293">
+            <span class="package-copy"><span class="package-number">Package 01</span><h3>Cultural Sri Lanka Explorer</h3><span class="package-meta"><span>6 days / 5 nights</span><span class="package-arrow">→</span></span></span>
+          </button>
+          <button class="package-card reveal" type="button" data-package="hills" aria-label="View Hill Country Escape package">
+            <img src="Images/kandy.jpg" alt="Train travelling through Sri Lanka's hill country" loading="lazy" width="1200" height="1291">
+            <span class="package-copy"><span class="package-number">Package 02</span><h3>Hill Country Escape</h3><span class="package-meta"><span>5 days / 4 nights</span><span class="package-arrow">→</span></span></span>
+          </button>
+          <button class="package-card reveal" type="button" data-package="coast" aria-label="View Southern Coastal Adventure package">
+            <img src="Images/galle-fort.jpg" alt="Sri Lanka's palm-fringed southern coast" loading="lazy" width="1200" height="800">
+            <span class="package-copy"><span class="package-number">Package 03</span><h3>Southern Coastal Adventure</h3><span class="package-meta"><span>5 days / 4 nights</span><span class="package-arrow">→</span></span></span>
+          </button>
+          <button class="package-card reveal" type="button" data-package="wildlife" aria-label="View Wildlife and Nature Adventure package">
+            <img src="Images/sinharaja-forest.jpg" alt="Elephant in a Sri Lankan national park" loading="lazy" width="1920" height="1243">
+            <span class="package-copy"><span class="package-number">Package 04</span><h3>Wildlife & Nature Adventure</h3><span class="package-meta"><span>4 days / 3 nights</span><span class="package-arrow">→</span></span></span>
+          </button>
+          <button class="package-card reveal" type="button" data-package="ultimate" aria-label="View Ultimate Sri Lanka Experience package">
+            <img src="Images/polonnaruwa.jpg" alt="Tropical Sri Lankan landscape" loading="lazy" width="1200" height="1800">
+            <span class="popular-badge">Most popular</span>
+            <span class="package-copy"><span class="package-number">Package 05</span><h3>Ultimate Sri Lanka Experience</h3><span class="package-meta"><span>10 days / 9 nights</span><span class="package-arrow">→</span></span></span>
+          </button>
+        </div>
+        <p class="package-note">All packages begin with airport pickup and end with airport drop off. Accommodation and meals are not included.</p>
+        <p class="custom-package-note"><strong>Not limited to these five packages.</strong><span>Tell us what you enjoy and how many days you have. We can build a personalized Sri Lanka itinerary around your interests, preferred pace and travel dates.</span></p>
+      </div>
+    </section>
+
+    <section class="detail" id="package-detail" aria-live="polite">
+      <div class="shell detail-panel" id="detail-panel">
+        <div class="detail-top">
+          <div>
+            <p class="eyebrow detail-label" id="detail-label">Package 01</p>
+            <h2 class="display detail-title" id="detail-title">Cultural Sri Lanka Explorer</h2>
+          </div>
+          <div class="detail-summary">
+            <p id="detail-intro">Trace the story of Sri Lanka through sacred cities, royal capitals, rock fortresses and living cultural traditions.</p>
+            <div class="fact-row">
+              <div class="fact"><span>Duration</span><strong id="detail-duration">6 days / 5 nights</strong></div>
+              <div class="fact"><span>Travel style</span><strong>Private tour</strong></div>
+              <div class="fact"><span>Start & finish</span><strong>Airport</strong></div>
+            </div>
+            <div class="route-block"><span>Your route</span><div class="route-chips" id="route-chips"></div></div>
+          </div>
+        </div>
+
+        <div class="detail-columns">
+          <aside class="highlight-card">
+            <h3>Package highlights</h3>
+            <ul class="highlight-list" id="highlight-list"></ul>
+            <div class="highlight-rule"></div>
+            <p class="exclusion"><strong>Please note:</strong> accommodation and meals are not included. Activity and entrance fees can be confirmed in your personalized quotation.</p>
+          </aside>
+          <div>
+            <header class="itinerary-head"><p class="eyebrow">Suggested itinerary</p><h3 id="itinerary-title">Six days of living history</h3></header>
+            <div class="day-list" id="day-list"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="signature-banner">
+      <div class="shell">
+        <div class="signature-banner-inner">
+          <div style="display:flex; align-items:center; gap:18px; flex-wrap:wrap;">
+            <img class="brand-logo signature-logo" src="magnific_modern-vector-logo-design_mEqBZOzhJQ-removebg-preview.png" alt="Bary Travel & Tours logo" width="110" height="45">
+            <div class="signature-banner-copy">
+              <span>Why choose Sri Lanka</span>
+              <h3>Luxury, culture, and nature in one unforgettable island.</h3>
+              <p>Sri Lanka blends world-class scenery with warm hospitality and deeply rooted heritage—making it ideal for travellers who want both ease and wonder.</p>
+            </div>
+          </div>
+          <a class="button button-light" href="#contact">Plan your journey</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about-sri-lanka" style="padding:120px 20px; background:linear-gradient(180deg,#fff 0%,#f8f0df 100%);">
+  <div class="shell">
+
+    <p class="eyebrow">The Pearl of the Indian Ocean</p>
+
+    <h2 class="display"
+        style="
+        font-size:clamp(3.5rem,7vw,6rem);
+        margin:0 0 25px;
+        max-width:700px;
+        line-height:0.95;
+        ">
+      Discover<br>Sri Lanka
+    </h2>
+
+    <div style="display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:start; margin-bottom:32px;">
+      <p class="lead"
+         style="
+         max-width:800px;
+         font-size:1.12rem;
+         line-height:1.8;
+         margin:0;
+         ">
+        Sri Lanka is a tropical island of extraordinary contrast: ancient kingdoms and sacred temples,
+        misty mountain roads and world-famous tea estates, golden beaches and dramatic wildlife reserves.
+        It is a place where heritage, nature and warm hospitality come together in a way that feels deeply personal.
+      </p>
+      <div style="padding:25px 24px;border:1px solid rgba(23,53,45,.12);border-radius:18px;background:#fffdf9;box-shadow:0 18px 34px rgba(23,53,45,.04);">
+        <span style="display:block;color:#a6401e;font-size:.7rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;">Why travellers return</span>
+        <p style="margin:12px 0 0;color:#50675f;line-height:1.7;">
+          Sri Lanka balances iconic sights with a slower pace, making it ideal for travellers who want both cultural depth and natural beauty.
+        </p>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;margin-top:20px;">
+      <div style="padding:24px;border:1px solid rgba(23,53,45,.12);border-radius:16px;background:#f5f1e8;box-shadow:0 12px 20px rgba(23,53,45,.02);">
+        <strong style="display:block;font-size:1.8rem;font-family:'Gloock',serif;">8 UNESCO</strong>
+        <span style="color:#50675f;">Sites, including Sigiriya, Galle Fort and Kandy.</span>
+      </div>
+      <div style="padding:24px;border:1px solid rgba(23,53,45,.12);border-radius:16px;background:#f5f1e8;box-shadow:0 12px 20px rgba(23,53,45,.02);">
+        <strong style="display:block;font-size:1.8rem;font-family:'Gloock',serif;">2,500+</strong>
+        <span style="color:#50675f;">Years of history shaped by kings, kingdoms and sacred traditions.</span>
+      </div>
+      <div style="padding:24px;border:1px solid rgba(23,53,45,.12);border-radius:16px;background:#f5f1e8;box-shadow:0 12px 20px rgba(23,53,45,.02);">
+        <strong style="display:block;font-size:1.8rem;font-family:'Gloock',serif;">1,000+</strong>
+        <span style="color:#50675f;">Tea estates produce some of the world’s finest Ceylon teas.</span>
+      </div>
+      <div style="padding:24px;border:1px solid rgba(23,53,45,.12);border-radius:16px;background:#f5f1e8;box-shadow:0 12px 20px rgba(23,53,45,.02);">
+        <strong style="display:block;font-size:1.8rem;font-family:'Gloock',serif;">30+</strong>
+        <span style="color:#50675f;">National parks and sanctuaries for safaris, birdlife and rainforest encounters.</span>
+      </div>
+    </div>
+
+    <div class="cards-grid">
+      <div class="card dark">
+        <span>Culture</span>
+        <h3>Ancient living heritage</h3>
+        <p>
+          Visit sacred cities, rock fortresses, temple towns and vibrant cultural performances that still shape everyday life.
+        </p>
+      </div>
+      <div class="card">
+        <span>Nature</span>
+        <h3>Wild beauty all around</h3>
+        <p>
+          From rainforest trails and waterfalls to safari plains and coastal cliffs, every landscape feels dramatic and cinematic.
+        </p>
+      </div>
+      <div class="card pale">
+        <span>Slow travel</span>
+        <h3>A journey that breathes</h3>
+        <p>
+          Sri Lanka is ideal for travellers who want rich experiences without rushing, with space to pause, connect and savour the moment.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="gallery" class="gallery-section">
+      <div class="shell">
+        <p class="eyebrow">The island in pictures</p>
+        <h2 class="display section-title">A gallery of Sri Lanka</h2>
+        <div class="gallery-grid">
+          <figure class="gallery-item" tabindex="0" data-title="Galle Fort" data-text="Galle Fort is a UNESCO-listed coastal treasure where colonial-era streets, ocean views and historic architecture create a timeless atmosphere.">
+            <img src="Images/galle-fort.jpg" alt="Galle Fort on the Sri Lankan coast" loading="lazy" width="1600" height="1000">
+            <figcaption>Galle Fort</figcaption>
+          </figure>
+          <figure class="gallery-item" tabindex="0" data-title="Sigiriya" data-text="The iconic Sigiriya Rock Fortress rises above lush green plains, one of Sri Lanka’s most unforgettable landmarks and a symbol of the island’s ancient royal past.">
+            <img src="Images/sigiriya.jpg" alt="Sigiriya Rock Fortress in Sri Lanka" loading="lazy" width="1200" height="1600">
+            <figcaption>Sigiriya</figcaption>
+          </figure>
+          <figure class="gallery-item" tabindex="0" data-title="Dambulla" data-text="Dambulla’s cave temple complex is a sacred site filled with statues and murals that reflect Sri Lanka’s deep Buddhist heritage and artistic traditions.">
+            <img src="Images/dambulla.jpg" alt="Dambulla cave temple" loading="lazy" width="1000" height="1200">
+            <figcaption>Dambulla</figcaption>
+          </figure>
+          <figure class="gallery-item" tabindex="0" data-title="Kandy" data-text="Kandy brings together spiritual atmosphere, lake views and cultural life, with the Temple of the Tooth at the heart of the city’s identity.">
+            <img src="Images/kandy.jpg" alt="Kandy lake and city" loading="lazy" width="1000" height="1200">
+            <figcaption>Kandy</figcaption>
+          </figure>
+          <figure class="gallery-item" tabindex="0" data-title="Anuradhapura" data-text="Anuradhapura is one of the oldest continuously inhabited cities in the world, known for its sacred stupas, reservoirs and spiritual atmosphere.">
+            <img src="Images/anuradhpura.jpg" alt="Anuradhapura sacred city" loading="lazy" width="1000" height="1200">
+            <figcaption>Anuradhapura</figcaption>
+          </figure>
+          <figure class="gallery-item" tabindex="0" data-title="Polonnaruwa" data-text="The ancient ruins of Polonnaruwa reveal Sri Lanka’s royal past through stone carvings, sacred monuments and expansive archaeological remains.">
+            <img src="Images/polonnaruwa.jpg" alt="Ancient ruins in Polonnaruwa" loading="lazy" width="1000" height="1200">
+            <figcaption>Polonnaruwa</figcaption>
+          </figure>
+          <figure class="gallery-item" tabindex="0" data-title="Sinharaja Forest" data-text="Sinharaja is Sri Lanka’s rainforest treasure, rich in biodiversity, misty trails and a sense of untouched wilderness.">
+            <img src="Images/sinharaja-forest.jpg" alt="Rainforest in Sri Lanka" loading="lazy" width="1600" height="1000">
+            <figcaption>Sinharaja</figcaption>
+          </figure>
+          <figure class="gallery-item" tabindex="0" data-title="Nine Arch Bridge" data-text="The Nine Arch Bridge in Ella is one of Sri Lanka’s most scenic railway landmarks, surrounded by forest-covered hills and dramatic valley views.">
+            <img src="Images/ninearchbridge.jpg" alt="Nine Arch Bridge in Sri Lanka" loading="lazy" width="1000" height="1200">
+            <figcaption>Ella</figcaption>
+          </figure>
+          <figure class="gallery-item" tabindex="0" data-title="Waterfall" data-text="Sri Lanka’s rainforest landscapes are dotted with falls, cool air and lush greenery that make every stop feel like a hidden natural retreat.">
+            <img src="Images/watefall.jpg" alt="Sri Lankan waterfall in lush green forest" loading="lazy" width="1600" height="1000">
+            <figcaption>Waterfall</figcaption>
+          </figure>
+          <figure class="gallery-item" tabindex="0" data-title="Beachside Escape" data-text="Sri Lanka’s beaches offer calm turquoise water, golden sand and ideal moments of rest between cultural excursions and nature adventures.">
+            <img src="Images/beach.jpg" alt="Sri Lankan beach shoreline" loading="lazy" width="1000" height="1200">
+            <figcaption>Beachside</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">      <img src="Images/galle-fort.jpg" alt="Golden evening on the Sri Lankan coast" loading="lazy" width="2000" height="1124">
+      <div class="shell contact-content reveal">
+        <p class="eyebrow">Plan with a local team</p>
+        <h2 class="display">Which part of Sri Lanka<br>is calling you?</h2>
+        <p>Send your preferred package, travel dates and group size. Bary Travel & Tours can adjust the route and prepare a personalized quotation.</p>
+        <div class="contact-links"> 
+          <a class="button button-primary" id="email-link" href="mailto:shaahimbary13@gmail.com?subject=Cultural%20Sri%20Lanka%20Explorer%20enquiry">Email your enquiry <span aria-hidden="true">→</span></a>
+          <a class="button button-light" href="https://wa.me/94777009897?text=Hi%20Bary%20Travel%20%26%20Tours!%20I%27d%20like%20to%20enquire%20about%20a%20Sri%20Lanka%20tour%20package." target="_blank" rel="noopener">WhatsApp +94 77 700 9897</a>
+          <a class="button button-outline"
+href="https://www.tripadvisor.com/Attraction_Review-g293962-d34383602-Reviews-Bary_Travel_Tours-Colombo_Western_Province.html"
+target="_blank"
+rel="noopener">
+
+Find us on Tripadvisor
+</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-row">
+      <a class="brand" href="#top"><img class="brand-logo" src="magnific_modern-vector-logo-design_mEqBZOzhJQ-removebg-preview.png" alt="Bary Travel & Tours logo" width="150" height="56"><span class="brand-copy"><strong>Bary Travel & Tours</strong><span>Sri Lanka</span></span></a>
+      <p>Private island journeys, shaped around you.</p>
+      <div class="footer-links"><a href="mailto:shaahimbary13@gmail.com">barytravel.toursinfo@gmail.com</a><a href="tel:+94777009897">+94 77 700 9897</a><a href="https://www.tripadvisor.com/Attraction_Review-g293962-d34383602-Reviews-Bary_Travel_Tours-Colombo_Western_Province.html" target="_blank" rel="noopener">Tripadvisor</a></div>
+    </div>
+  </footer>
+
+  <a class="floating-whatsapp" href="https://wa.me/94777009897?text=Hi%20Bary%20Travel%20%26%20Tours!%20I%27d%20like%20to%20enquire%20about%20a%20Sri%20Lanka%20tour%20package." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.76 11.76 0 0 0 12.04 0C5.54 0 .18 5.36.18 11.86c0 2.09.54 4.13 1.56 5.94L0 24l6.36-1.66a11.87 11.87 0 0 0 5.68 1.71h.01c6.5 0 11.86-5.36 11.86-11.86 0-3.17-1.23-6.15-3.39-8.39ZM12.04 21.6c-1.82 0-3.57-.49-5.11-1.41l-.37-.22-3.77.98 1-3.66-.24-.38A9.74 9.74 0 0 1 2.34 11.9c0-5.38 4.38-9.76 9.78-9.76 2.61 0 5.06 1.02 6.9 2.86a9.72 9.72 0 0 1 2.86 6.9c0 5.4-4.38 9.78-9.76 9.78Zm5.36-7.3c-.29-.15-1.72-.85-1.99-.95-.27-.1-.46-.15-.66.15-.2.29-.77.95-.95 1.14-.17.2-.35.22-.64.07-.29-.15-1.22-.45-2.33-1.44-.86-.77-1.45-1.72-1.62-2.01-.17-.3-.02-.46.13-.61.14-.14.29-.35.44-.52.15-.17.2-.29.3-.48.1-.2.05-.37-.02-.52-.07-.15-.66-1.6-.9-2.2-.24-.58-.49-.5-.66-.51l-.57-.01c-.2 0-.52.07-.8.37-.28.3-1.08 1.06-1.08 2.58 0 1.52 1.1 2.99 1.26 3.19.15.2 2.17 3.31 5.27 4.65.74.32 1.31.51 1.76.66.74.24 1.41.2 1.94.12.59-.09 1.72-.7 1.97-1.38.24-.67.24-1.25.17-1.37-.07-.12-.26-.2-.55-.35Z"/></svg>
+  </a>
+
+  <script>
+    const packages = {
+      cultural: {
+        number: 'Package 01',
+        title: 'Cultural Sri Lanka Explorer',
+        duration: '6 days / 5 nights',
+        intro: 'Trace the story of Sri Lanka through sacred cities, royal capitals, rock fortresses and living cultural traditions.',
+        itineraryTitle: 'Six days of living history',
+        route: ['Airport Pickup', 'Negombo', 'Anuradhapura', 'Mihintale', 'Polonnaruwa', 'Sigiriya', 'Dambulla', 'Kandy', 'Airport Drop Off'],
+        highlights: ['Sigiriya Rock Fortress', 'Dambulla Cave Temple', 'Temple of the Tooth', 'Ancient Kingdoms', 'Cultural Dance Show', 'Village Safari'],
+        days: [
+          ['Arrival & Negombo', 'Meet your driver at the airport and begin with an easy introduction to the island in coastal Negombo.'],
+          ['Anuradhapura & Mihintale', 'Travel north to explore the sacred city of Anuradhapura, then climb Mihintale for history and wide sunset views.'],
+          ['Polonnaruwa', 'Discover the ruins, statues and reservoirs of Sri Lanka’s medieval capital before continuing through the Cultural Triangle.'],
+          ['Sigiriya & village safari', 'Climb Sigiriya Rock Fortress, then experience rural village life through local landscapes and traditional transport.'],
+          ['Dambulla to Kandy', 'Visit the Dambulla Cave Temple, continue to Kandy and finish the day with a vibrant cultural dance show.'],
+          ['Temple of the Tooth & departure', 'Visit Kandy’s sacred Temple of the Tooth before the journey back to the airport for drop off.']
+        ]
+      },
+      hills: {
+        number: 'Package 02',
+        title: 'Hill Country Escape',
+        duration: '5 days / 4 nights',
+        intro: 'Wind through cool mountain roads, working tea estates and cinematic railway country on a refreshing highland escape.',
+        itineraryTitle: 'Five days above the clouds',
+        route: ['Airport Pickup', 'Kandy', 'Nuwara Eliya', 'Ella', 'Haputale', 'Airport Drop Off'],
+        highlights: ['Tea Plantations', 'Tea Factory Visit', 'Scenic Train Ride', 'Nine Arch Bridge', "Little Adam's Peak", 'Ramboda Falls', 'Ravana Zip Line Adventure', 'Ella Rock Viewpoints'],
+        days: [
+          ['Arrival & Kandy', 'Meet your driver at the airport and travel into the central hills for an introduction to Kandy.'],
+          ['Ramboda & Nuwara Eliya', 'Follow mountain roads past Ramboda Falls, visit a tea plantation and factory, and explore cool-climate Nuwara Eliya.'],
+          ['Scenic train to Ella', 'Take the celebrated hill-country train toward Ella, then visit the Nine Arch Bridge in the afternoon.'],
+          ['Ella & Haputale viewpoints', "Walk Little Adam's Peak, choose the Ravana Zip Line Adventure and continue toward Haputale’s dramatic viewpoints."],
+          ['Highlands to airport', 'Enjoy a final mountain morning before your private drive to the airport for drop off.']
+        ]
+      },
+      coast: {
+        number: 'Package 03',
+        title: 'Southern Coastal Adventure',
+        duration: '5 days / 4 nights',
+        intro: 'Follow the southern shoreline through surf towns, historic streets, river wetlands and palm-fringed bays.',
+        itineraryTitle: 'Five days beside the Indian Ocean',
+        route: ['Airport Pickup', 'Bentota', 'Hikkaduwa', 'Galle', 'Unawatuna', 'Mirissa', 'Ahangama', 'Hiriketiya', 'Airport Drop Off'],
+        highlights: ['Whale Watching', 'Coconut Tree Hill', 'Galle Fort', 'Surfing', 'Beach Relaxation', 'Turtle Hatchery', 'Madu River Boat Safari', 'Snorkelling', 'Sunset Beach Experiences'],
+        days: [
+          ['Bentota & Madu River', 'Travel south from the airport for a Madu River boat safari, turtle hatchery visit and a relaxed Bentota sunset.'],
+          ['Hikkaduwa, Galle & Unawatuna', 'Choose snorkelling in Hikkaduwa, walk through historic Galle Fort and end the day by Unawatuna Bay.'],
+          ['Mirissa & Coconut Tree Hill', 'Set out for seasonal whale watching, relax on Mirissa Beach and visit Coconut Tree Hill in the evening.'],
+          ['Ahangama to Hiriketiya', 'Try a surf session in Ahangama before following the coast to the curved bay and laid-back atmosphere of Hiriketiya.'],
+          ['Coastal morning & departure', 'Enjoy one last beach morning before the private drive to the airport for drop off.']
+        ]
+      },
+      wildlife: {
+        number: 'Package 04',
+        title: 'Wildlife & Nature Adventure',
+        duration: '4 days / 3 nights',
+        intro: 'Move from elephant country to leopard territory and the open ocean on a compact journey built around Sri Lanka’s wild side.',
+        itineraryTitle: 'Four days on the wild side',
+        route: ['Airport Pickup', 'Udawalawe', 'Yala', 'Tissamaharama', 'Mirissa', 'Airport Drop Off'],
+        highlights: ['Leopard Safari', 'Elephant Safari', 'Bird Watching', 'Whale Watching', 'Wildlife Photography', 'National Park Exploration'],
+        days: [
+          ['Arrival & Udawalawe', 'Meet your driver and travel to Udawalawe, with time for an elephant safari depending on arrival time.'],
+          ['Udawalawe to Tissamaharama', 'Explore elephant country and travel onward through bird-rich landscapes to Tissamaharama near Yala.'],
+          ['Yala safari & Mirissa', 'Start early for a Yala jeep safari focused on leopards, elephants and wildlife photography, then continue to Mirissa.'],
+          ['Whale watching & departure', 'Join a seasonal whale-watching excursion before your private airport drop off.']
+        ]
+      },
+      ultimate: {
+        number: 'Package 05 · Most Popular',
+        title: 'Ultimate Sri Lanka Experience',
+        duration: '10 days / 9 nights',
+        intro: 'Bring Sri Lanka’s ancient cities, tea country, wildlife, adventure and southern coast together in one complete island journey.',
+        itineraryTitle: 'Ten unforgettable days across Sri Lanka',
+        route: ['Airport Pickup', 'Negombo', 'Anuradhapura', 'Polonnaruwa', 'Sigiriya', 'Kandy', 'Nuwara Eliya', 'Ella', 'Yala', 'Mirissa', 'Galle', 'Colombo', 'Airport Drop Off'],
+        highlights: ['Ancient Kingdoms', 'Sigiriya Rock Fortress', 'Temple of the Tooth', 'Scenic Train Journey', 'Tea Plantations', 'Wildlife Safari', 'Whale Watching', 'Beaches & Coastal Experiences', 'Mangrove Boat Rides', 'White Water Rafting', 'Water Sports Activities', 'Nature Trails', 'Cultural Experiences'],
+        days: [
+          ['Arrival & Negombo', 'Begin with airport pickup and an easy coastal introduction in Negombo.'],
+          ['Ancient Anuradhapura', 'Travel north to the sacred city of Anuradhapura and explore its monuments, reservoirs and living places of worship.'],
+          ['Polonnaruwa & Sigiriya', 'Discover the ancient kingdom of Polonnaruwa before continuing through rural scenery to Sigiriya.'],
+          ['Sigiriya to Kandy', 'Climb Sigiriya Rock Fortress, experience local village culture and continue toward Kandy.'],
+          ['Kandy, rafting & Nuwara Eliya', 'Visit the Temple of the Tooth, choose a white-water rafting experience and climb into the tea country.'],
+          ['Tea country train to Ella', 'Tour a tea plantation, board the scenic train and arrive among Ella’s mountain landscapes and nature trails.'],
+          ['Ella to Yala', 'Explore Ella viewpoints and adventure activities before descending toward Yala National Park.'],
+          ['Wildlife safari & Mirissa', 'Search for elephants, leopards and birdlife on safari, then continue to the southern coast at Mirissa.'],
+          ['Whales, coast & Galle', 'Choose seasonal whale watching, beach or water sports, then explore Galle and nearby mangrove landscapes.'],
+          ['Colombo & airport drop off', 'Travel through Colombo for a final look at the capital before your airport drop off.']
+        ]
+      }
+    };
+
+    const checkIcon = '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="m4 10 4 4 8-9" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>';
+    const panel = document.getElementById('detail-panel');
+    const detailLabel = document.getElementById('detail-label');
+    const detailTitle = document.getElementById('detail-title');
+    const detailIntro = document.getElementById('detail-intro');
+    const detailDuration = document.getElementById('detail-duration');
+    const routeChips = document.getElementById('route-chips');
+    const highlightList = document.getElementById('highlight-list');
+    const itineraryTitle = document.getElementById('itinerary-title');
+    const dayList = document.getElementById('day-list');
+    const emailLink = document.getElementById('email-link');
+
+    function renderPackage(key, shouldScroll = true) {
+      const selected = packages[key];
+      panel.classList.add('changing');
+      window.setTimeout(() => {
+        detailLabel.textContent = selected.number;
+        detailTitle.textContent = selected.title;
+        detailIntro.textContent = selected.intro;
+        detailDuration.textContent = selected.duration;
+        itineraryTitle.textContent = selected.itineraryTitle;
+        routeChips.innerHTML = selected.route.map((place) => `<span class="route-chip">${place}</span>`).join('');
+        highlightList.innerHTML = selected.highlights.map((highlight) => `<li>${checkIcon}<span>${highlight}</span></li>`).join('');
+        dayList.innerHTML = selected.days.map((day, index) => `<article class="day"><span class="day-num">${String(index + 1).padStart(2, '0')}</span><div><h4>${day[0]}</h4><p>${day[1]}</p></div></article>`).join('');
+        emailLink.href = `mailto:shaahimbary13@gmail.com?subject=${encodeURIComponent(selected.title + ' enquiry')}`;
+        document.querySelectorAll('.package-card').forEach((card) => card.classList.toggle('active', card.dataset.package === key));
+        panel.classList.remove('changing');
+        if (shouldScroll) document.getElementById('package-detail').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 180);
+    }
+
+    document.querySelectorAll('.package-card').forEach((card) => card.addEventListener('click', () => renderPackage(card.dataset.package)));
+    renderPackage('cultural', false);
+
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
+    menuToggle.addEventListener('click', () => {
+      const isOpen = mainNav.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+    });
+    mainNav.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+      mainNav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }));
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: .1 });
+    document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
+
+    function initGalleryPopup() {
+      const galleryPopup = document.getElementById('popup');
+      const popupImg = document.getElementById('popup-img');
+      const popupTitle = document.getElementById('popup-title');
+      const popupText = document.getElementById('popup-text');
+      const popupPrev = document.getElementById('popup-prev');
+      const popupNext = document.getElementById('popup-next');
+      const galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
+
+      let currentGalleryIndex = 0;
+
+      function openPopup(index) {
+        if (!galleryItems.length || !galleryPopup) return;
+        currentGalleryIndex = index;
+        const item = galleryItems[currentGalleryIndex];
+        if (!item) return;
+
+        const image = item.querySelector('img');
+        popupImg.src = image.src;
+        popupImg.alt = item.dataset.title || image.alt;
+        popupTitle.textContent = item.dataset.title || 'Gallery image';
+        popupText.textContent = item.dataset.text || '';
+        galleryPopup.classList.add('open');
+        galleryPopup.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closePopup() {
+        if (!galleryPopup) return;
+        galleryPopup.classList.remove('open');
+        galleryPopup.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      function showPrevImage() {
+        const nextIndex = (currentGalleryIndex - 1 + galleryItems.length) % galleryItems.length;
+        openPopup(nextIndex);
+      }
+
+      function showNextImage() {
+        const nextIndex = (currentGalleryIndex + 1) % galleryItems.length;
+        openPopup(nextIndex);
+      }
+
+      window.openPopup = function(indexOrElement) {
+        const index = typeof indexOrElement === 'number' ? indexOrElement : Number(indexOrElement.dataset.index || 0);
+        openPopup(index);
+      };
+      window.closePopup = closePopup;
+
+      galleryItems.forEach((item, index) => {
+        item.dataset.index = String(index);
+        item.addEventListener('click', () => openPopup(index));
+        item.addEventListener('keydown', (event) => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            openPopup(index);
+          }
+        });
+      });
+
+      if (popupPrev) popupPrev.addEventListener('click', showPrevImage);
+      if (popupNext) popupNext.addEventListener('click', showNextImage);
+
+      galleryPopup.addEventListener('click', (event) => {
+        if (event.target === galleryPopup) closePopup();
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (!galleryPopup.classList.contains('open')) return;
+        if (event.key === 'Escape') closePopup();
+        if (event.key === 'ArrowLeft') showPrevImage();
+        if (event.key === 'ArrowRight') showNextImage();
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initGalleryPopup);
+    } else {
+      initGalleryPopup();
+    }
+  </script>
+  <div id="popup" class="popup" aria-hidden="true">
+    <div class="popup-content" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+      <button class="close-btn" type="button" aria-label="Close gallery popup" onclick="closePopup()">&times;</button>
+      <img id="popup-img" src="" alt="">
+      <h2 id="popup-title"></h2>
+      <p id="popup-text"></p>
+      <div class="popup-controls">
+        <button id="popup-prev" class="popup-nav" type="button" aria-label="Previous image">← Prev</button>
+        <button id="popup-next" class="popup-nav" type="button" aria-label="Next image">Next →</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
